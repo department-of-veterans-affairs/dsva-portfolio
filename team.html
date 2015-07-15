@@ -1,0 +1,29 @@
+---
+layout: default
+title: "DSVA | Team"
+
+---
+
+	
+	<!-- <h1 class="center">Our Team</h1> -->
+
+		<div class="card-container">
+			{% for person in site.data.team %}
+			
+			<div class="card">
+				<div class="image" style="background-image: url({{ person.picture }});"></div>
+				<div class="info">
+					<span class="name">{{ person.name }}</span><span class="title"> {{ person.title }}</span>
+				</div>
+				
+				<div class="divider"></div>
+
+				<div class="social">
+					<a href="https://github.com/{{ person.github }}"><i class="fa fa-github"></i></a>
+					<a href="https://twitter.com/{{ person.twitter }}"><i class="fa fa-twitter"></i></a>
+				</div>
+				
+			</div>
+			{% endfor %}
+
+		</div>

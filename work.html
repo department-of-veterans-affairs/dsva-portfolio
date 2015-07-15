@@ -1,0 +1,20 @@
+---
+layout: default
+title: "DSVA | Team"
+
+---
+
+<div class="card-container work">
+	{% for post in site.posts %}
+	
+	<a class="card" href="{{ site.url }}/{{ post.permalink }}">
+		<div class="image" style="background-color: #ccc;"></div>
+		<div class="info">
+			<span class="name">{{ post.title }}</span><span class="title"> - {{ post.subtitle }}</span>
+		</div>
+		
+		
+	</a>
+	{% endfor %}
+
+</div>

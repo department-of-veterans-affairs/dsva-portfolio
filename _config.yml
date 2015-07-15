@@ -1,0 +1,28 @@
+# Site settings
+title: DIGITAL SERVICE at VA
+# tagline: 
+# url: "http://yourwebsite.com" # The base hostname & protocol for your site. Use it if you need absolute URL's
+
+# Social
+# socialimg: /img/social.jpg # be sure to change this image
+# facebook: fbusername
+# twitter: twusername
+# github: ghusername
+# googleplus: gusername
+# instagram: igusername
+
+# Contact
+# phone: 
+# email: 
+
+# Use this for production
+#sass:
+#    style: :compressed
+
+exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
+collections: 
+ - team
+
+
+
+

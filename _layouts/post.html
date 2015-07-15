@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+{% include head.html %}
+
+	
+	<body>
+		<div class="wrapper"> <!-- wraps the page content to create a sticky footer -->
+			
+			{% include header.html %}
+			
+			<div class="container post">
+
+				<!--[if lt IE 8]>
+				<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+				<![endif]-->
+				<div class="">
+					<h1>{{ page.title }}</h1>
+					{{ content }}
+				</div>
+
+				<h2>Team</h2>
+
+				<div class="card-container">
+				{% for member in page.contributors %}
+					{% for person in site.data.team %}
+						{% if person.name == member %}
+					
+							<div class="card">
+								<div class="image" style="background-image: url({{ person.picture }});"></div>
+								<div class="info">
+									<span class="name">{{ person.name }}</span><span class="title"> {{ person.title }}</span>
+								</div>
+								
+								<div class="divider"></div>
+
+								<div class="social">
+									<a href="https://github.com/{{ person.github }}"><i class="fa fa-github"></i></a>
+									<a href="https://twitter.com/{{ person.twitter }}"><i class="fa fa-twitter"></i></a>
+								</div>
+							</div>
+
+						{% endif %}		
+					{% endfor %}
+				{% endfor %}
+				</div>
+
+
+			</div>
+			<div class="push"></div> <!-- makes room for the footer -->
+		</div>		
+
+		
+
+		</div>
+
+		{% include footer.html %}
+
+
+
+	</body>
+</html>
+

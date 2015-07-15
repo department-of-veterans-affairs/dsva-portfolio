@@ -1,0 +1,75 @@
+---
+layout: default
+title: "Test"
+
+---
+
+
+	
+
+	
+
+		
+
+
+<h2>Team</h2>
+
+<div class="card-container">
+{% for member in page.contributors %}
+	{% for person in site.data.team %}
+		{% if person.name == member %}
+	
+			<div class="card">
+				<div class="image" style="background-image: url({{ person.picture }});"></div>
+				<div class="info">
+					<span class="name">{{ person.name }}</span><span class="title"> {{ person.title }}</span>
+				</div>
+				
+				<div class="divider"></div>
+
+				<div class="social">
+					<a href="https://github.com/{{ person.github }}"><i class="fa fa-github"></i></a>
+					<a href="https://twitter.com/{{ person.twitter }}"><i class="fa fa-twitter"></i></a>
+				</div>
+			</div>
+
+		{% endif %}		
+	{% endfor %}
+{% endfor %}
+</div>
+
+
+
+
+<!-- {% assign member = site.data.team | where: "referance_name", "kavi_harshawat" | first %} -->
+<!-- {% for member in site.data.team %} -->
+
+<!-- {{ member.name }}<br> -->
+
+<!-- {% endfor %} -->
+
+
+
+<!-- {% for person in site.data.team %}
+	<ul>
+		<li>{{ person.name }}</li>
+	</ul>
+
+{% endfor %} -->
+<!-- 
+
+dave:
+    name: David Smith
+    twitter: DavidSilvaSmith
+
+---
+title: sample post
+author: dave
+---
+
+{% assign author = site.data.people[page.author] %}
+<a rel="author"
+  href="{{ author.twitter }}"
+  title="{{ author.name }}">
+    {{ author.name }}
+</a> -->

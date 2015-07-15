@@ -1,0 +1,301 @@
+---
+---
+
+@charset "utf-8";
+
+body{
+	margin: 0;
+}
+
+// Some Style Variables
+$background-color: #3c79a3;
+$primary-color: #fff;
+$secondary-color: #ccc;
+$tertiary-color: #185787;
+$error: #de3535;
+$success: #d5f5d7;
+
+$max-width: 960px;
+
+// Breakpoints. Use these in your media queries.
+$babybear: 321px;
+$mamabear: 769px;
+$papabear: 1140px;
+$monsterbear: 1300px;
+
+$font-size: 15px;
+$font-family: "futura-pt", Helvetica, sans-serif;
+$alt-font-family: monospace;
+$font-color: #fff;
+$light: 300;
+$book: 400;
+$medium: 500;
+$heavy: 700;
+
+/* Social Icons */
+$twitter: #78cdf0 !default;
+$facebook: #537bbd !default;
+$instagram: #517fa4 !default;
+$youtube: #d34836 !default;
+$snapchat: #fffc00 !default;
+$pinterest:	#cb2027 !default;
+$google: #dd4b39 !default;
+
+@mixin transition($transition) {
+  	-webkit-transition: $transition;
+	   -moz-transition: $transition;
+ 	     -o-transition: $transition;
+	        transition: $transition;
+}
+
+
+
+// Utility Classes
+.test {
+	border: 1px solid red;
+}
+.center {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+* {
+	// margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	margin-bottom: -100px; /* the bottom margin is the negative value of the footer's height */
+}
+footer, .push {
+	height: 100px; /* '.push' must be the same height as 'footer' */
+}
+
+body {
+	font-family: $font-family;
+	background-color: $background-color;
+	color: $font-color;
+	font-weight: $light;
+	line-height: 30px;
+	font-size: $font-size;
+	// padding-top: 80px;
+}
+a,a:visited {
+	color: $primary-color;
+	text-decoration:none;
+}
+a:hover {
+	color: $secondary-color;
+}
+
+.container {
+	margin: 0 auto ;
+	max-width: $max-width;
+	padding:0 10px;
+}
+
+.site-title {
+	text-decoration: none;
+	font-weight: $medium;
+	letter-spacing: 2px;
+	font-size: 16px;
+	width: 275px;
+	margin: 0 auto;
+	margin-top:-13px;
+	color: $primary-color;
+	background: $background-color;
+}
+
+
+
+.divider {
+	border-bottom: 1px solid $primary-color;
+	padding-top: 30px;
+}
+
+
+
+// Cards
+.card-container { 
+  text-align: justify;
+  font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
+  min-width: 600px;
+}
+.card-container:after {
+	content: '';
+  	width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+  	display: inline-block;
+}
+.card {  
+  padding: 0;
+  margin: 0 auto;
+  height:250px;
+  width: 300px;
+  overflow: hidden; 
+  display: inline-block;
+}
+.card .image { 
+  	height: 150px;
+  	min-width:100%; 
+  	background-position:center;
+  	background-repeat:no-repeat;
+	margin-bottom:10px;
+}
+.card .info {
+	font-size: 13px;
+	line-height: 20px;
+}
+.card .social > a {
+	font-size: 20px;
+	color: $tertiary-color;
+	padding-right: 10px;
+	@include transition(150ms);    
+}
+.card-container .divider {
+	padding: 0;
+	margin: 8px 0;
+	border-color: transparentize($primary-color, .6);
+}
+
+.card .social > a:hover {
+	color: $primary-color;
+}
+.card .name {
+	font-weight: $book;
+}
+.card .title {
+	font-weight: $light;
+	color: $secondary-color;
+}
+
+
+
+
+// Nabar Navigation Styles
+.navbar {
+	padding-top: 20px;
+	height: 40px;
+	margin-bottom:40px;
+}
+.navbar .site-title {
+	margin: 0;
+	padding: 0;
+}
+.navbar .nav {
+	margin: 0;
+	padding: 0;
+	display: block;
+	float: right;
+	line-height: 0;
+}
+.navbar .nav a {
+	padding: 0 20px 10px 20px;
+	// font-size: $font-size;
+}
+.navbar .nav a:hover {
+	color: $secondary-color;
+	border-bottom: 2px solid $secondary-color;
+}
+
+
+.preface, .post {
+	margin: 0 auto;
+	max-width: 700px;
+	padding: 0 20px;
+}
+
+// POST STYLES
+.post img {
+	max-height: 300px;
+	display: block;
+	margin: 0 auto;
+}
+
+
+// PREFACE STYLES
+.preface .dsva-logo {
+	display: block;
+	margin: 0 auto;
+	padding-top: 100px;
+	padding-bottom: 40px;
+}
+.preface .nav ul {
+	margin-top: 60px;
+}
+.preface .nav li  {
+	padding: 0 100px 0 0;
+}
+.preface .nav a {
+	padding: 30px 30px 10px 30px;
+}
+
+
+
+
+
+
+
+
+// General navigation styles
+.nav a {
+	color: $font-color;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: $book;
+	letter-spacing: 2px;
+	font-size: 16px;
+	border-bottom: 2px solid $background-color;
+	@include transition(150ms);    
+}
+.nav ul {
+	list-style: none;
+	padding: 0;
+}
+.nav li {
+	display: inline;
+	padding: 0 60px 0 0;
+}
+.nav li:last-child {
+	padding-right: 0;
+}
+
+.nav a:hover {
+	color: $secondary-color;
+	border-bottom: 2px solid $secondary-color;
+}
+
+
+// Footer
+.footer .dsva-logo {
+	display:block;
+	margin-top:-12px;
+	color: $primary-color;
+	background: $background-color;
+	padding: 0 10px;
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 620px) {
+	.card-container {
+		text-align: center;
+		min-width: 0;
+	}
+
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base"
+;
