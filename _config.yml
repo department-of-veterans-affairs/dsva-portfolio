@@ -1,7 +1,7 @@
 # Site settings
 title: DIGITAL SERVICE at VA
 # tagline: 
-# url: "http://yourwebsite.com" # The base hostname & protocol for your site. Use it if you need absolute URL's
+url: "http://department-of-veterans-affairs.github.io/dsva-portfolio/" # The base hostname & protocol for your site. Use it if you need absolute URL's
 
 # Social
 # socialimg: /img/social.jpg # be sure to change this image
