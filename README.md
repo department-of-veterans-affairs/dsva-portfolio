@@ -49,7 +49,7 @@ contributors:
 ---
 ```
 
-As we mentioend above all the Frontmatter is surrounded by `---`. The `layout` variable is what template the page should follow. In this case we should just use the `post` template. We set the `category` to `work` to make it easy to collect all the projects on the work landing page. The `permalink` should be set to whatever you want the URL to looklike in browser's address bar (best to keep this simple). 
+As we mentioned above all the Frontmatter is surrounded by `---`. The `layout` variable is what template the page should follow. In this case we should just use the `post` template. We set the `category` to `work` to make it easy to collect all the projects on the work landing page. The `permalink` should be set to whatever you want the URL to looklike in browser's address bar (best to keep this simple). 
 
 A couple of lines below we have variables that are used in the post itself. The `title` should be the title of your project. The `subtitle` variable is used on the work landing page. Use the `date-updated` variable to make let others know when this project was last updated. Finally, you can list out all the `contributors` to a project by listing them out like the example above. This will automatically generate a little grid with these people's faces and details at the bottom of the project page (pretty nifty, eh?). If you list someone here, make sure they're also listed in the `_data/team.yml` file or their information won't show up!
 
