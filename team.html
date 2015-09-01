@@ -20,7 +20,9 @@ title: "DSVA | Team"
 
 				<div class="social">
 					<a href="https://github.com/{{ person.github }}"><i class="fa fa-github"></i></a>
-					<a href="https://twitter.com/{{ person.twitter }}"><i class="fa fa-twitter"></i></a>
+					{% if person.twitter %}
+						<a href="https://twitter.com/{{ person.twitter }}"><i class="fa fa-twitter"></i></a>
+					{% endif %}
 				</div>
 				
 			</div>
